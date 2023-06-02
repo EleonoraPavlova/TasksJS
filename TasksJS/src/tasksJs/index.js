@@ -50,4 +50,6 @@ function dropElements(arr, func) {
   return index >= 0 ? arr.slice(index) : [];
 }
 
-console.log(dropElements([1, 2, 3, 4], function (n) { return n > 5; })); // []
+dropElements([1, 2, 3, 4], function (n) { return n > 5; }); // []
+
+
