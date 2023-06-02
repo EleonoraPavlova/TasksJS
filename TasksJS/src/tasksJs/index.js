@@ -53,3 +53,18 @@ function dropElements(arr, func) {
 dropElements([1, 2, 3, 4], function (n) { return n > 5; }); // []
 
 
+
+//Steamroller /without Array.prototype.flat()
+function steamrollArray(arr) {
+  return arr.reduce((acc, curr) => {
+    if (Array.isArray(curr)) {
+      acc.push(...steamrollArray(curr));
+    } else {
+      acc.push(curr);
+    }
+    return acc;
+  }, [])
+}
+
+console.log(steamrollArray([1, {}, [3, [[4]]]])); // [1, {}, 3, 4]
+
