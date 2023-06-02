@@ -41,4 +41,13 @@ function smallestCommons(arr) {
   }
 }
 
-console.log(smallestCommons([1, 5]));
+smallestCommons([1, 5]);
+
+
+//Drop it
+function dropElements(arr, func) {
+  let index = arr.indexOf(arr.find((n) => func(n)))
+  return index >= 0 ? arr.slice(index) : [];
+}
+
+console.log(dropElements([1, 2, 3, 4], function (n) { return n > 5; })); // []
