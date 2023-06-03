@@ -82,3 +82,16 @@ function binaryAgent(str) {
 
 binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
 
+
+//Everything Be True
+function truthCheck(collection, pre) {
+  let count = 0;
+  collection.forEach((el) => {
+    if (el[pre]) {
+      count++
+    }
+  })
+  return count === collection.length ? true : false
+}
+
+truthCheck([{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "data") // true
