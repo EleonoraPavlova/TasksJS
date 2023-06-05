@@ -95,3 +95,31 @@ function truthCheck(collection, pre) {
 }
 
 truthCheck([{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "data") // true
+
+
+//Arguments Optional каррирование 2 аргумента
+function addTogether(f) {
+  return function curry(...arg) {
+    if (arg.length >= f.length) {
+      return f.call(this, ...arg)
+    }
+    return curry.bind(this, ...arg)
+  }
+}
+
+function sum(a, b) {
+  return a + b;
+}
+
+let sumTwoAnd = addTogether(sum);
+console.log(sumTwoAnd(2, 4))
+
+//второй вариант:
+function addTogether() {
+  const [first, second] = arguments;
+
+  if (typeof (first) === "number") {
+    if (typeof (second) === "number") return first + second;
+    if (arguments.length === 1) return (second) => addTogether(first, second);
+  }
+}
