@@ -112,10 +112,10 @@ function sum(a, b) {
 }
 
 let sumTwoAnd = addTogether(sum);
-console.log(sumTwoAnd(2, 4))
+sumTwoAnd(2, 4);
 
 //второй вариант:
-function addTogether() {
+function addTogethe() {
   const [first, second] = arguments;
 
   if (typeof (first) === "number") {
@@ -123,3 +123,45 @@ function addTogether() {
     if (arguments.length === 1) return (second) => addTogether(first, second);
   }
 }
+
+
+
+//Make a Person 
+const Person = function (firstAndLast) {
+  let fullName = firstAndLast;
+
+  this.getFirstName = function () {
+    return fullName.split(" ")[0];
+  };
+
+  this.getLastName = function () {
+    return fullName.split(" ")[1];
+  };
+
+  this.getFullName = function () {
+    return fullName;
+  };
+
+  this.setFirstName = function (name) {
+    fullName = name + " " + fullName.split(" ")[1];
+  };
+
+  this.setLastName = function (name) {
+    fullName = fullName.split(" ")[0] + " " + name;
+  };
+
+  this.setFullName = function (name) {
+    fullName = name;
+  };
+};
+
+const bob = new Person("Bob Ross");
+console.log(bob.getFullName());
+console.log(Object.keys(bob)) // 6 методов, выводит  6 длину!
+console.log(bob.getFullName());
+console.log(bob.getFirstName());
+console.log(bob.getLastName());
+console.log(bob.getFullName());
+bob.setFirstName(first);
+bob.setLastName(last);
+bob.setFullName(firstAndLast);
