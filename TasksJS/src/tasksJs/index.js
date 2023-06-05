@@ -179,4 +179,16 @@ function orbitalPeriod(arr) {
   });
 }
 
-console.log(orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }])); //[{name: "sputnik", orbitalPeriod: 86400}].
+orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]); //[{name: "sputnik", orbitalPeriod: 86400}].
+
+
+
+//Palindrome Checker
+function palindrome(str) {
+  let preparedStr = str.replace(/[^a-z0-9]/ig, "")
+  let copyStr = preparedStr.toLowerCase().split('')
+  let reversed = [...copyStr].reverse()
+  return JSON.stringify(reversed) == JSON.stringify(copyStr) ? true : false
+}
+
+console.log(palindrome("1 eye for of 1 eye.")); //false
