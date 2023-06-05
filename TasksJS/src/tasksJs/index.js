@@ -156,12 +156,27 @@ const Person = function (firstAndLast) {
 };
 
 const bob = new Person("Bob Ross");
-console.log(bob.getFullName());
-console.log(Object.keys(bob)) // 6 методов, выводит  6 длину!
-console.log(bob.getFullName());
-console.log(bob.getFirstName());
-console.log(bob.getLastName());
-console.log(bob.getFullName());
-bob.setFirstName(first);
-bob.setLastName(last);
-bob.setFullName(firstAndLast);
+// console.log(bob.getFullName());
+// console.log(Object.keys(bob)) // 6 методов, выводит  6 длину!
+// console.log(bob.getFullName());
+// console.log(bob.getFirstName());
+// console.log(bob.getLastName());
+// console.log(bob.getFullName());
+// bob.setFirstName(first);
+// bob.setLastName(last);
+// bob.setFullName(firstAndLast);
+
+
+
+//Map the Debris 
+function orbitalPeriod(arr) {
+  const GM = 398600.4418;
+  const earthRadius = 6367.4447;
+  return arr.map((el) => {
+    el.orbitalPeriod = Math.round(2 * Math.PI * Math.sqrt(Math.pow(earthRadius + el.avgAlt, 3) / GM))
+    delete el.avgAlt
+    return el
+  });
+}
+
+console.log(orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }])); //[{name: "sputnik", orbitalPeriod: 86400}].
