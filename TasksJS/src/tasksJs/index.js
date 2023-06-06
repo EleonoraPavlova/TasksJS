@@ -250,4 +250,13 @@ function rot13(str) {
   return res.join("")
 }
 
-console.log(rot13("SERR PBQR PNZC")); //FREE CODE CAMP
+rot13("SERR PBQR PNZC"); //FREE CODE CAMP
+
+
+
+//Telephone Number Validator
+function telephoneCheck(str) {
+  return true;
+}
+
+console.log(telephoneCheck("555-555-5555"));

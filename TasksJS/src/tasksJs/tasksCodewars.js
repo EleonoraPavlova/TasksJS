@@ -16,3 +16,16 @@ function saleHotdogs(n) {
   }
 }
 saleHotdogs(1);
+
+
+//Largest Number Arrangement
+function largestArrangement(arr) {
+  let mapped = arr.map(s => s.toString());
+  let res = mapped.sort((a, b) => {
+    //большое начало строки/ меньшее начало строки
+    return (b + a) - (a + b)
+  })
+  return res.join('')
+
+}
+console.log(largestArrangement([8, 6, 590, 70])) // 8706590
