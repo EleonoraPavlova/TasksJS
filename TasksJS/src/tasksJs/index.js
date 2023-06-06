@@ -221,4 +221,33 @@ function convertToRoman(num) {
   return str;
 }
 
-console.log(convertToRoman(3)); // III
+convertToRoman(3); // III
+
+
+
+//Caesars Cipher
+function rot13(str) {
+  let splitted = str.split('')
+  let convertToRot13 = splitted.map((el) => {
+    if (/^[A-Z]$/g.test(el)) {
+      el = el.charCodeAt(0)
+      if (el >= 65 && el <= 77) {
+        return el += 13
+      } else {
+        return el -= 13
+      }
+    } else {
+      return el
+    }
+  })
+  let res = convertToRot13.map((el) => {
+    if (/[^\W ]/g.test(el)) {
+      return String.fromCharCode(el)
+    } else {
+      return el
+    }
+  })
+  return res.join("")
+}
+
+console.log(rot13("SERR PBQR PNZC")); //FREE CODE CAMP
