@@ -256,7 +256,9 @@ rot13("SERR PBQR PNZC"); //FREE CODE CAMP
 
 //Telephone Number Validator
 function telephoneCheck(str) {
-  return true;
+  let re = /^1?\s?(\d{3}|\(\d{3}\))-?\s?\d{3}-?\s?\d{4}$/gm;
+  //m -	Многострочность: анкер метасимвола работает в каждой строке
+  return re.test(str)
 }
 
-console.log(telephoneCheck("555-555-5555"));
+console.log(telephoneCheck("11 555-555-5555"));
