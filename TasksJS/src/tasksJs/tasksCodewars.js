@@ -22,10 +22,18 @@ saleHotdogs(1);
 function largestArrangement(arr) {
   let mapped = arr.map(s => s.toString());
   let res = mapped.sort((a, b) => {
-    //большое начало строки/ меньшее начало строки
+    //большeе начало строки/ меньшее начало строки
     return (b + a) - (a + b)
   })
   return res.join('')
 
 }
-console.log(largestArrangement([8, 6, 590, 70])) // 8706590
+largestArrangement([8, 6, 590, 70]) // 8706590
+
+
+
+//Small enough?
+function smallEnough(arr, limit) {
+  return arr.every((el) => el <= limit) ? true : false
+}
+smallEnough(([78, 117, 110, 99, 104, 117, 107, 115], 100)) //false
