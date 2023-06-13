@@ -46,28 +46,28 @@ function getFunction(sequence) {
   return linear ? "f(x) = " + (mul ? (mul == 1 ? '' : mul == -1 ? "-" : mul) + "x" + (!add ? "" : (add > 0 ? " + " : " - ") + Math.abs(add)) : add) : "Non-linear sequence"
 }
 
-console.log(getFunction([1, 4, 7, 10, 13]))  //"f(x) = x", "Nope! Try again."
+getFunction([1, 4, 7, 10, 13])  //"f(x) = x", "Nope! Try again."
 //an = 2n(cтепень2) + 1 - n число которое проверяем на послед
 
 
-// let seq = [];
 
-// for (let i = 0; i < sequence.length; i++) {
-//   if (sequence[i] < sequence[i + 1]) {
-//     let x = sequence[i + 1] - sequence[i]
-//     seq.push(x)
-//     console.log(x)
-//   }
-// }
-// let res = seq.every((el, index) => el[0] === el[index])
-// if (res === true) {
-//   if (seq[0] === 1) {
-//     return 'f(x) = x'
-//   } else if (sequence[0] === 1) {
-//     return `f(x) = ${seq[0]}` + 'x + 1'
-//   } else if (seq[0] > 2) {
-//     return `f(x) = ${seq[0]}` + 'x'
-//   }
-// } else {
-//   return "Non - linear sequence";
-// }
+//Multiplication table
+function multiplicationTable(size) {
+  let mainArr = []
+  let i = 1
+  while (i <= size) {
+    mainArr.push(i)
+    i++
+  }
+  return mainArr.reduce((acc, curr) => {
+    let smallArr = []
+    for (let i = 0; i < mainArr.length; i++) {
+      smallArr.push(curr * mainArr[i]);
+      if (smallArr.length === size) {
+        acc.push(smallArr)
+      }
+    }
+    return acc
+  }, [])
+}
+multiplicationTable(3)// [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
