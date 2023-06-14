@@ -2,16 +2,79 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<link rel="icon" href="/favicon.ico" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Tasks JS</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css" type="text/css ">
+	<title>Form</title>
 </head>
 
 <body>
-	<div id="app"></div>
-	<script type="module" src="./src/tasksJs/tasksCodewars.js"></script>
+	<main class="main">
+		<header class="">
+			<h1 id="title">freeCodeCamp Survey Form</h1>
+			<p id="description">Thank you for taking the time to help us improve the platform</p>
+		</header>
+		<form id="survey-form" action="#" class="survey-form">
+			<fieldset>
+				<div class="personal-data">
+					<label for="name"> Name </label>
+					<input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required />
+				</div>
+				<div class="personal-data">
+					<label for="email"> Email </label>
+					<input type="email" name="email" id="email" placeholder="Enter your Email" class="form-control" required />
+				</div>
+				<div class="personal-data">
+					<label for="number"> Age (optional) </label>
+					<input type="number" name="number" id="number" min="10" max="90" placeholder="Age" class="form-control"
+						required />
+				</div>
+				<div class="personal-data">
+					<label for="dropdown">Which option best describes your current role?</label>
+					<select id="dropdown" name="dropdown" class="form-control">
+						<optional value="0" disabled>Select current role</optional>
+						<optional value="1">Student</optional>
+						<optional value="2">Full Time job</optional>
+						<optional value="3">Full Time Learner</optional>
+						<optional value="4">Prefer not to say</optional>
+					</select>
+				</div>
+			</fieldset>
+			<fieldset>
+				<label for="radio">Would you recommend freeCodeCamp to a friend?</label>
+				<div>
+					<div class="radio-item">
+						<input type="radio" id="radio" name="radio" value="definitely" />
+						<lebel for="radio">Definitely</lebel>
+					</div>
+					<div class="radio-item">
+						<input type="radio" id="radio" name="radio" value="maybe" />
+						<lebel for="radio">Maybe</lebel>
+					</div>
+					<div class="radio-item">
+						<input type="radio" id="radio" name="radio" value="nsure" />
+						<lebel for="radio">Not sure</lebel>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="personal-data">
+					<label for="dropdownFeature">What is your favorite feature of freeCodeCamp?</label>
+					<select id="dropdownFeature" name="dropdownFeature" class="form-control">
+						<optional value="Select" disabled>Select an option</optional>
+						<optional value="Challenges">Challenges</optional>
+						<optional value="Projects">Projects</optional>
+						<optional value="Community">Community</optional>
+						<optional value="4">Open Sourse</optional>
+					</select>
+				</div>
+			</fieldset>
+			<div class="button">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</main>
 </body>
-<script></script>
 
 </html>
