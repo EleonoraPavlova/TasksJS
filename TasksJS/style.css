@@ -29,11 +29,10 @@ body::before {
 }
 
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: 0 auto;
   margin-top: 20px;
+  max-width: 50%;
+  min-width: 300px;
 }
 
 header {
@@ -45,9 +44,11 @@ h1 {
   line-height: 1.2;
   padding-top: 30px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 header p {
+  text-align: center;
   font-style: italic;
   font-weight: 200;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
