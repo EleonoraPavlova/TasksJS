@@ -18,15 +18,15 @@
 		<form id="survey-form" action="#" class="survey-form" method="post">
 			<fieldset>
 				<div class="personal-data">
-					<label for="name"> Name </label>
+					<label for="name" id="name-label"> Name </label>
 					<input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required />
 				</div>
 				<div class="personal-data">
-					<label for="email"> Email </label>
+					<label for="email" id="email-label"> Email </label>
 					<input type="email" name="email" id="email" placeholder="Enter your Email" class="form-control" required />
 				</div>
 				<div class="personal-data">
-					<label for="number"> Age (optional) </label>
+					<label for="number" id="number-label"> Age (optional) </label>
 					<input type="number" name="number" id="number" min="10" max="90" placeholder="Age" class="form-control"
 						required />
 				</div>
@@ -72,54 +72,84 @@
 			</fieldset>
 			<fieldset>
 				<div class="personal-data">
-					<label for="improve"> What would you like to see improved? <small> (Check all that apply) </small>
+					<label for="improve"> What would you like to see improved? <small class="padding-left"> ( Check all that apply
+							)
+						</small>
 					</label>
 					<div>
 						<label for="front-end">
-							<input type="checkbox" id="front-end" name="front-end">
+							<input type="checkbox" id="front-end" name="front-end" value="front-end">
 							Front-end Projects
 						</label>
 					</div>
 					<div>
 						<label for="back-end">
-							<input type="checkbox" id="back-end" name="back-end">
+							<input type="checkbox" id="back-end" name="back-end" value="back-end">
 							Back-end Projects
 						</label>
 					</div>
 					<div>
 						<label for="visualization">
-							<input type="checkbox" id="visualization" name="visualization">
+							<input type="checkbox" id="visualization" name="visualization" value="visualization">
 							Data Visualization
 						</label>
 					</div>
 					<div>
 						<label for="challenges">
-							<input type="checkbox" id="challenges" name="challenges">
+							<input type="checkbox" id="challenges" name="challenges" value="challenges">
 							Challenges
 						</label>
 					</div>
 					<div>
 						<label for="community">
-							<input type="checkbox" id="community" name="community">
+							<input type="checkbox" id="community" name="community" value="community">
 							Open Source Community
 						</label>
 					</div>
 					<div>
 						<label for="help">
-							<input type="checkbox" id="help" name="help">
+							<input type="checkbox" id="help" name="help" value="help">
 							Gitter help rooms
 						</label>
 					</div>
 					<div>
 						<label for="videos">
-							<input type="checkbox" id="videos" name="videos">
+							<input type="checkbox" id="videos" name="videos" value="videos">
 							Videos
+						</label>
+					</div>
+					<div>
+						<label for="meetups">
+							<input type="checkbox" id="meetups" name="meetups" value="meetups">
+							City Meetups
+						</label>
+					</div>
+					<div>
+						<label for="wiki">
+							<input type="checkbox" id="wiki" name="wiki" value="wiki">
+							Wiki
+						</label>
+					</div>
+					<div>
+						<label for="forum">
+							<input type="checkbox" id="forum" name="forum" value="forum">
+							Forum
+						</label>
+					</div>
+					<div>
+						<label for="additional">
+							<input type="checkbox" id="additional" name="additional" value="additional">
+							Additional Courses
 						</label>
 					</div>
 				</div>
 			</fieldset>
-			<div class="button">
-				<button type="submit">Submit</button>
+			<fieldset>
+				<label for="textarea">Any comments or suggestions?</label>
+				<textarea id="textarea" name="textarea" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+			</fieldset>
+			<div class=" button">
+				<button type="submit" id="submit">Submit</button>
 			</div>
 		</form>
 	</main>
