@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Poppins', sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  font-weight: 400;
+  margin: 0;
+}
+
+#img-div {
+  background: white;
+  padding: 10px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  /* overflow-clip-margin: content-box;
+  overflow: clip; */
+}
