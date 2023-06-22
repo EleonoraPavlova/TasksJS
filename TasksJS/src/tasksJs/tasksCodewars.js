@@ -70,4 +70,40 @@ function multiplicationTable(size) {
     return acc
   }, [])
 }
-multiplicationTable(3)// [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+multiplicationTable(3) // [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+
+
+
+//Find the unique number
+function findUniq(arr) {
+  //cколько раз каждый  элемент массива повторяется
+  let res = arr.reduce((acc, el) => {
+    acc[el] = (acc[el] || 0) + 1;
+    return acc;
+  }, {});
+
+  //взяла ключи из 0бъекта, нашла ключ который повторился ровно один раз
+  let found = Object.keys(res).filter((el) => {
+    return res[el] === 1;
+  })
+
+  return Number(found[0])
+}
+findUniq([0, 0, 0.55, 0, 0]) //1
+
+//тоже рабочее решение, но не оптимальное для большого массива цифр
+// let set = new Set(arr)
+// let unique;
+// let arrUnique = Array.from(set)
+// for (let i = 0; i < arr.length; i++) {
+//   for (let k = 0; k < arrUnique.length; k++) {
+//     if (arr[i] === arrUnique[k]) {
+//       arr.splice(i, 1)
+//       if (!arr.includes(arrUnique[k])) {
+//         unique = arrUnique[k]
+//         break
+//       }
+//     }
+//   }
+// }
+// return unique
