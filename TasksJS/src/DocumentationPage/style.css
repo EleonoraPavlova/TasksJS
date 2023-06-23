@@ -9,18 +9,15 @@
 
 html,
 body {
-  min-width: 290px;
   color: #4d4e53;
   background-color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
-  display: flex;
-
 }
 
 h1 {
   font-size: 2rem;
-  padding: 20px 0 20px 30px;
+  padding: 20px;
 }
 
 h1,
@@ -29,20 +26,31 @@ h2 {
 }
 
 h2 {
+  font-size: 30px;
   padding: 20px 0px;
 }
 
 nav {
-  width: 43%;
+  height: 100%;
+  width: 21%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   border-right: 1px solid #4d4e53;
+  overflow-x: hidden;
 }
 
 nav > ul > li {
   list-style-type: none;
   padding: 10px 0;
   border-top: 1px solid #4d4e53;
-
+  display: block;
   padding-left: 35px;
+}
+
+nav > ul > li > a :hover {
+  color: black
 }
 
 ul {
@@ -51,7 +59,9 @@ ul {
 }
 
 #main-doc {
-  margin: 40px 35px;
+  margin: 24px 30px 30px 22%;
+  font-size: inherit;
+  padding: 0px 20px;
 }
 
 .nav-link {
@@ -68,4 +78,107 @@ p {
 main > section > ul > li {
   margin-left: 80px;
   margin-bottom: 15px;
+}
+
+pre {
+  border-radius: 5px;
+  margin-left: 32px;
+  background-color: #f7f7f7;
+}
+
+pre > code {
+  padding: 15px 15px 15px 0;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px 10px 10px 32px;
+  border-radius: 5px;
+}
+
+.data-typesList {
+  margin: 15px 0 0 55px;
+}
+
+.data-typesList > li {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 868px) and (min-width: 390px) {
+  nav {
+    width: 41%;
+  }
+
+  h1 {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+    padding: 15px 0px;
+  }
+
+  nav > ul > li {
+    padding: 7px 0;
+    padding-left: 25px;
+  }
+
+  #main-doc {
+    margin: 14px 20px 20px 42%;
+    padding: 0px 10px;
+  }
+
+  main > section > ul > li {
+    margin-left: 35px;
+  }
+
+  pre {
+    margin-left: 0px;
+  }
+
+  code {
+    margin-left: 15px;
+  }
+
+  pre > code {
+    padding: 5px 5px 5px 0;
+  }
+
+  .data-typesList {
+    margin: 15px 0 0 9px;
+  }
+
+  .code-media {
+    margin: 15px;
+    overflow: auto;
+  }
+
+}
+
+@media (max-width: 1100px) and (min-width: 868px) {
+  nav {
+    width: 31%;
+  }
+
+  #main-doc {
+    margin: 14px 20px 20px 32%;
+    padding: 0px 10px;
+  }
+
+  main > section > ul > li {
+    margin-left: 45px;
+  }
+
+  .data-typesList {
+    margin: 15px 0 0 28px;
+  }
 }
