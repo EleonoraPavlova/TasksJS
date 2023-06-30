@@ -170,10 +170,20 @@
 </body>
 <script>
   (function () {
+    const dropdown = document.getElementById('dropdown');
     const burger = document.getElementById("navbar-button");
-    burger.addEventListener('click', () => {
-      document.getElementById('dropdown').classList.toggle('active');
+    const listener1 = burger.addEventListener('click', () => {
+      dropdown.classList.toggle('active');
     })
+    dropdown.classList.remove('active');
+
+    const listener2 = dropdown.addEventListener('click', (event) => {
+      if (event.target === dropdown || dropdown.contains(event.target)) {
+        dropdown.classList.remove('active');
+      }
+    });
+    burger.addEventListener('click', listener1, false);
+    dropdown.addEventListener('click', listener2, false);
   }());
 </script>
 
