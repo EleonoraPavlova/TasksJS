@@ -8,8 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
   <title>Portfolio Webpage</title>
 </head>
@@ -18,12 +16,28 @@
   <main>
     <nav id="navbar">
       <h5>Eleonora's portfolio</h5>
+      <div class="navbar-mobile">
+        <button type="button" class="navbar-button" id="navbar-button">
+          <div class="navbar-mobile-dot"></div>
+          <div class="navbar-mobile-dot"></div>
+          <div class="navbar-mobile-dot"></div>
+        </button>
+      </div>
       <ul>
         <li><a href="#welcome-section">About</a></li>
         <li><a href="#projects">Work</a></li>
         <li><a href="#social-media">Contact</a></li>
       </ul>
     </nav>
+    <div class="dropdown" id="dropdown">
+      <div class="navbar-mobile-menu">
+        <ul>
+          <li><a href="#welcome-section">About</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#social-media">Contact</a></li>
+        </ul>
+      </div>
+    </div>
     <section id="welcome-section">
       <h1>Hey I am Pavlova Eleonora</h1>
       <p>a web developer</p>
@@ -46,74 +60,82 @@
       <h4>These are some of my projects</h4>
       <ul>
         <li>
-          <figure class="projects-item"><a
-              href="https://eleonorapavlova.github.io/EleonoraPavlovaSiberian/build/main.html" target="_blank"><img
-                class="projects-img" src="../../public/images/siberian.png" alt="siberian"></a>
+          <figure class="project-tile"><a
+              href="https://eleonorapavlova.github.io/EleonoraPavlovaSiberian/build/main.html" id="profile-link"
+              target="_blank"><img class="projects-img" src="../../public/images/siberian.png" alt="siberian"></a>
             <figcaption>Internet shop</figcaption>
           </figure>
-          <figure class="projects-item"><a
-              href="https://eleonorapavlova.github.io/EleonoraPavlovaSiberian/build/main.html" target="_blank"> <img
-                class="projects-img" src="../../public/images/siberian1.png" alt="siberian"></a>
+          <figure class="project-tile"><a
+              href="https://eleonorapavlova.github.io/EleonoraPavlovaSiberian/build/main.html" id="profile-link"
+              target="_blank"> <img class="projects-img" src="../../public/images/siberian1.png" alt="siberian"></a>
             <figcaption>Internet shop</figcaption>
           </figure>
-          <figure class="projects-item"><a href="https://20210502-fe.github.io/EleonoraPavlova_GRID/build/main.html"
-              target="_blank"><img class="projects-img" src="../../public/images/grid.png" alt="grid"></a>
+          <figure class="project-tile"><a href="https://20210502-fe.github.io/EleonoraPavlova_GRID/build/main.html"
+              id="profile-link" target="_blank"><img class="projects-img" src="../../public/images/grid.png"
+                alt="grid"></a>
             <figcaption>Gallery-grid</figcaption>
           </figure>
-          <figure class="projects-item"><a href="https://eleonorapavlova.github.io/nailEvents/" target="_blank"><img
-                class="projects-img" src="../../public/images/event.png" alt="grid"></a>
+          <figure class="project-tile"><a href="https://eleonorapavlova.github.io/nailEvents/" id="profile-link"
+              target="_blank"><img class="projects-img" src="../../public/images/event.png" alt="grid"></a>
             <figcaption>Nail event(full adaptive) React</figcaption>
           </figure>
         </li>
         <li class="portfolio__col">
-          <figure class="projects-item"> <a href="https://20210502-fe.github.io/YakovlevaEleonora_UGMONK/"
-              target="_blank"><img class="projects-img" src="../../public/images/ugmonk.png" alt="ugmonk"></a>
+          <figure class="project-tile"> <a href="https://20210502-fe.github.io/YakovlevaEleonora_UGMONK/"
+              id="profile-link" target="_blank"><img class="projects-img" src="../../public/images/ugmonk.png"
+                alt="ugmonk"></a>
             <figcaption>Internet shop</figcaption>
           </figure>
-          <figure class="projects-item"> <a href="https://20210502-fe.github.io/YakovlevaEleonora_UGMONK/"
-              target="_blank"><img class="projects-img" src="../../public/images/ugmonk1.png" alt="ugmonk"></a>
+          <figure class="project-tile"> <a href="https://20210502-fe.github.io/YakovlevaEleonora_UGMONK/"
+              id="profile-link" target="_blank"><img class="projects-img" src="../../public/images/ugmonk1.png"
+                alt="ugmonk"></a>
             <figcaption>Internet shop</figcaption>
           </figure>
-          <figure class="projects-item"><a href="https://20210502-fe.github.io/YakovlevaEleonoraHungryPeople/"
-              target="_blank"><img class="projects-img" src="../../public/images/hungry.png" alt="hungry"></a>
+          <figure class="project-tile"><a href="https://20210502-fe.github.io/YakovlevaEleonoraHungryPeople/"
+              id="profile-link" target="_blank"><img class="projects-img" src="../../public/images/hungry.png"
+                alt="hungry"></a>
             <figcaption>Restaurant</figcaption>
           </figure>
-          <figure class="projects-item"><a href="https://20210502-fe.github.io/YakovlevaEleonoraHungryPeople/"
-              target="_blank"><img class="projects-img" src="../../public/images/hungry1.png" alt="hungry"></a>
+          <figure class="project-tile"><a href="https://20210502-fe.github.io/YakovlevaEleonoraHungryPeople/"
+              id="profile-link" target="_blank"><img class="projects-img" src="../../public/images/hungry1.png"
+                alt="hungry"></a>
             <figcaption>Restaurant</figcaption>
           </figure>
         </li>
         <li>
-          <figure class="projects-item"> <a href="https://20210502-fe.github.io/YakovlevaEleonora_DreamHouse/"
-              target="_blank">
+          <figure class="project-tile"> <a href="https://20210502-fe.github.io/YakovlevaEleonora_DreamHouse/"
+              id="profile-link" target="_blank">
               <img class="projects-img" src="../../public/images/house2.png" alt="house"></a>
             <figcaption>Websites for House Plans</figcaption>
           </figure>
-          <figure class="projects-item"><a href="https://20210502-fe.github.io/EleonoraPavlova_css_box_model/"
-              target="_blank"><img class="projects-img" src="../../public/images/box.png" alt="box"></a>
+          <figure class="project-tile"><a href="https://20210502-fe.github.io/EleonoraPavlova_css_box_model/"
+              id="profile-link" target="_blank"><img class="projects-img" src="../../public/images/box.png"
+                alt="box"></a>
             <figcaption>Metcast</figcaption>
           </figure>
-          <figure class="projects-item"><a href="https://20210502-fe.github.io/EleonoraPavlova_css_box_model/"
-              target="_blank">
+          <figure class="project-tile"><a href="https://20210502-fe.github.io/EleonoraPavlova_css_box_model/"
+              id="profile-link" target="_blank">
               <img class="projects-img" src="../../public/images/box1.png" alt="box"></a>
             <figcaption>Adaptive(tablet) metcast</figcaption>
           </figure>
         </li>
         <li>
-          <figure class="projects-item"><a href="https://20210502-fe.github.io/YakovlevaEleonora_DreamHouse/"
-              target="_blank"><img class="projects-img" src="../../public/images/house.png" alt="house"></a>
+          <figure class="project-tile"><a href="https://20210502-fe.github.io/YakovlevaEleonora_DreamHouse/"
+              id="profile-link" target="_blank"><img class="projects-img" src="../../public/images/house.png"
+                alt="house"></a>
             <figcaption>Websites for House Plans</figcaption>
           </figure>
-          <figure class="projects-item"> <a href="https://eleonorapavlova.github.io/formGmail/#/task" target="_blank">
+          <figure class="project-tile"> <a href="https://eleonorapavlova.github.io/formGmail/#/task" id="profile-link"
+              target="_blank">
               <img class="projects-img" src="../../public/images/task.png" alt="task"></a>
             <figcaption>Task board(filters, Api, Vuex, compositionApi, router) Vue3</figcaption>
           </figure>
-          <figure class="projects-item"><a href="https://eleonorapavlova.github.io/TicketsCrypto/" target="_blank"><img
-                class="projects-img" src="../../public/images/crypto.png" alt="crypto"></a>
+          <figure class="project-tile"><a href="https://eleonorapavlova.github.io/TicketsCrypto/" id="profile-link"
+              target="_blank"><img class="projects-img" src="../../public/images/crypto.png" alt="crypto"></a>
             <figcaption>CryptoCompare(filters, Api, Vuex, websockets) Vue3</figcaption>
           </figure>
-          <figure class="projects-item "><a href="https://eleonorapavlova.github.io/Shop/" target="_blank"><img
-                class="projects-img" src="../../public/images/popular-items.png" alt="items"></a>
+          <figure class="project-tile "><a href="https://eleonorapavlova.github.io/Shop/" id="profile-link"
+              target="_blank"><img class="projects-img" src="../../public/images/popular-items.png" alt="items"></a>
             <figcaption>Shop(filters, Api, Vuex) Vue3</figcaption>
           </figure>
         </li>
@@ -146,5 +168,13 @@
   </footer>
 
 </body>
+<script>
+  (function () {
+    const burger = document.getElementById("navbar-button");
+    burger.addEventListener('click', () => {
+      document.getElementById('dropdown').classList.toggle('active');
+    })
+  }());
+</script>
 
 </html>
