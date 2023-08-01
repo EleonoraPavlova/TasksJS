@@ -107,3 +107,44 @@ findUniq([0, 0, 0.55, 0, 0]) //1
 //   }
 // }
 // return unique
+
+
+//8, Find the Remainder
+// function remainder(a, b) {
+//   return (a > b ? a % b : b % a)
+// }
+
+// remainder(-60, 340)
+
+
+//7,Row Weights
+// function rowWeights(arr) {
+//   let oneArr = [];
+//   let twoArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i % 2 === 0) {
+//       oneArr.push(arr[i])
+//     } else {
+//       twoArr.push(arr[i])
+//     }
+//   }
+
+//   let sumOneArr = oneArr.reduce((acc, curr) => acc + curr, 0)
+//   let sumTwoArr = twoArr.reduce((acc, curr) => acc + curr, 0)
+//   return [sumOneArr, sumTwoArr]
+// }
+
+// rowWeights([50, 60, 70, 80], [120, 140])
+
+
+
+
+//8,Vowel remover
+//удаление лишних букв
+//Создайте функцию  для удаления строчных гласных (a, e, i, o, u) в заданной строке
+// function shortcut(string) {
+//   return string.replace(/[\a\e\i\o\u]/gi, '')
+//   /// return string.replace(/[aeiou]/g,'')
+// }
+// shortcut('how are you today ?')
+
