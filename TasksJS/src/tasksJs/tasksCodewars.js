@@ -148,3 +148,126 @@ findUniq([0, 0, 0.55, 0, 0]) //1
 // }
 // shortcut('how are you today ?')
 
+
+
+//7, В рамках этой Ката вам нужно создать функцию, которая при наличии
+//триплета возвращает индекс числового элемента, лежащего между двумя другими элементами
+//ищем число, которое находится между последовательными числами
+//найти среднее число и вернуть index
+// function gimme(triplet) {
+//   if (Array.isArray(triplet) && triplet.length === 3) {
+//     let sorted = [...triplet].sort((a, b) => a - b)
+//     return triplet.findIndex(item => item === sorted[1])
+//   }
+// }
+// gimme([2, 3, 1]) // gimme([2, 3, 1]) => 0
+
+
+
+//8, Создайте функцию, которая возвращает значение, умноженное на 50 и увеличенное на 6.
+// Если введенное значение является строкой, оно должно возвращать «Ошибка»
+//typeof возвращает строку, указывающую тип операнда.
+// function problem(num) {
+//   return typeof num !== "string" ? ((num * 50) + 6) : "Error"
+// }
+// problem(2)
+
+
+//8,Keep up the hoop
+// function hoopCount(n) {
+//   return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+// }
+// hoopCount(15)
+
+
+//8,Is it even? 
+//код определит, является ли переданное число четным (или нет)
+//остаток от деления!!!!
+// function testEven(n) {
+//   const b = Math.abs(n)
+//   return b >= 0 && b % 2 === 0 ? true : false
+// }
+// testEven(-2) //  true or false
+
+
+
+//6, Parse HTML/CSS Colors  - Hex//шестнадцатеричный в десятичную!
+// function parseHTMLColor(colorHex) {
+//   if (!colorHex.startsWith('#')) {
+//     const str = PRESET_COLORS[colorHex.toLowerCase()]
+//     return convert(str.substring(1))
+//   }
+//   if (colorHex.length === 4) {
+//     const arr = [...colorHex].splice(1, 3).map(el => el + el).join('')
+//     return convert(arr)
+//   }
+//   return convert(colorHex.substring(1))
+// }
+// parseHTMLColor('#80FFA0') // =>  { r: 51, g: 187, b: 119 }
+// function convert(colorHex) {
+//   const rHex = colorHex.slice(0, 2);
+//   const gHex = colorHex.slice(2, 4);
+//   const bHex = colorHex.slice(4);
+//   const r = parseInt(rHex, 16)
+//   const g = parseInt(gHex, 16)
+//   const b = parseInt(bHex, 16)
+//   return { r, g, b }
+// }
+
+
+//8,The Wide-Mouthed frog!
+// function mouthSize(animal) {
+//   return animal.toLowerCase() === "alligator" ? "small" : "wide"
+// }
+// mouthSize("alligator")
+
+
+//8,Area or Perimeter
+//Вам даны длина и ширина четырехугольника.
+//Многоугольник может быть прямоугольным или квадратным.Если это квадрат,
+//вернуть его площадь.Если это прямоугольник, верните его периметр.
+//для целей этой ката вы будете считать, что это квадрат,
+//если его длина и ширина равны, в противном случае это прямоугольник
+// function areaOrPerimeter(length, width) {
+//   return length === width ? length * width : 2 * (length + width)
+// }
+// areaOrPerimeter(3, 3)
+
+//8 Convert a string to an array
+// function stringToArray(string) {
+//   return string.split(" ")
+// }
+// stringToArray("Robin Singh") // ==> ["Robin", "Singh"]
+
+
+
+//7 Predict your age!
+// Составьте список возрастов, когда каждый из ваших прадедов умер.
+// Умножьте каждое число само на себя.
+// Добавьте их все вместе.
+// Возьмите квадратный корень из результата.
+// Разделить на два.
+// function predictAge(...args) {
+//   return Math.trunc(Math.sqrt([...args].map(n => n * n).reduce((acc, curr) => acc + curr)) / 2)
+// }
+// predictAge(65, 60, 75, 55, 60, 63, 64, 45)
+
+
+
+//7 Sort Numbers 
+// function solution(nums) {
+//   return nums ? nums.sort((a, b) => a - b) : []
+// }
+// solution([1, 2, 10, 50, 5])
+
+
+//6 Encrypt this!
+// Ваше сообщение представляет собой строку, содержащую слова, разделенные пробелами.
+// Вам необходимо зашифровать каждое слово в сообщении, используя следующие правила:
+// Первая буква должна быть преобразована в код ASCII.
+// Вторая буква должна быть заменена последней буквой
+// Не усложняйте: во вводе нет специальных символов.
+function encryptThis(text) {
+  // Implement me! :)
+}
+encryptThis("hello world") // "104olle 119drlo"
