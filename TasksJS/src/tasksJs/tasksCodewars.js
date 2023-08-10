@@ -265,9 +265,31 @@ findUniq([0, 0, 0.55, 0, 0]) //1
 // Ваше сообщение представляет собой строку, содержащую слова, разделенные пробелами.
 // Вам необходимо зашифровать каждое слово в сообщении, используя следующие правила:
 // Первая буква должна быть преобразована в код ASCII.
-// Вторая буква должна быть заменена последней буквой
+// Вторая буква должна быть поменяна последней буквой
 // Не усложняйте: во вводе нет специальных символов.
-function encryptThis(text) {
-  // Implement me! :)
-}
-encryptThis("hello world") // "104olle 119drlo"
+// function encryptThis(text) {
+//   let transform = text.split(" ").map(word => {
+//     if (word.length > 2) {
+//       return word.charCodeAt(0) + word[word.length - 1] + word.slice(2, word.length - 1) + word[1]
+//     }
+//     if (word.length > 1) {
+//       return word.charCodeAt(0).toString() + word[1]
+//     }
+//     return word.charCodeAt(0).toString()
+//   })
+//   return transform.join(" ")
+// }
+// console.log(encryptThis("A wise old owl lived in an oak"))  // 65 119esi 111dl 111lw 108dvei 105n 97n 111ka
+
+
+
+//5, Regex Password Validation
+// Не менее шести символов
+// содержит строчную букву
+// содержит заглавную букву
+// содержит цифру
+// содержит только буквенно - цифровые символы(обратите внимание, что '_' не является буквенно - цифровым)
+function RegexPassword(str) {
+  return /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{6,}$/g.test(str)
+};
+RegexPassword("4lShsMKc3") //false
