@@ -289,7 +289,24 @@ findUniq([0, 0, 0.55, 0, 0]) //1
 // содержит заглавную букву
 // содержит цифру
 // содержит только буквенно - цифровые символы(обратите внимание, что '_' не является буквенно - цифровым)
-function RegexPassword(str) {
-  return /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{6,}$/g.test(str)
-};
-RegexPassword("4lShsMKc3") //false
+// function RegexPassword(str) {
+//   return /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{6,}$/g.test(str)
+// };
+// RegexPassword("4lShsMKc3") //false
+
+
+//7 Sum of odd numbers
+//Учитывая треугольник последовательных нечетных чисел:
+//Вычислите сумму чисел в n - й строке этого 
+//треугольника(начиная с индекса 1), например: (Вход-- > Выход)
+function rowSumOddNumbers(n) {
+  const oddArr = [];
+  let startNumbers = (n * n) - (n - 1)
+  while (n > 0) {
+    oddArr.push(startNumbers)
+    startNumbers += 2
+    n--
+  }
+  return oddArr.reduce((acc, curr) => acc + curr, 0)
+}
+console.log(rowSumOddNumbers(42))  // 74088
