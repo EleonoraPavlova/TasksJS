@@ -299,14 +299,67 @@ findUniq([0, 0, 0.55, 0, 0]) //1
 //Учитывая треугольник последовательных нечетных чисел:
 //Вычислите сумму чисел в n - й строке этого 
 //треугольника(начиная с индекса 1), например: (Вход-- > Выход)
-function rowSumOddNumbers(n) {
-  const oddArr = [];
-  let startNumbers = (n * n) - (n - 1)
-  while (n > 0) {
-    oddArr.push(startNumbers)
-    startNumbers += 2
-    n--
-  }
-  return oddArr.reduce((acc, curr) => acc + curr, 0)
-}
-console.log(rowSumOddNumbers(42))  // 74088
+// function rowSumOddNumbers(n) {
+//   const oddArr = [];
+//   let startNumbers = (n * n) - (n - 1)
+//   while (n > 0) {
+//     oddArr.push(startNumbers)
+//     startNumbers += 2
+//     n--
+//   }
+//   return oddArr.reduce((acc, curr) => acc + curr, 0)
+// }
+// console.log(rowSumOddNumbers(42))  // 74088
+
+
+//7 Pretty date
+// Вычислить сколько прошло часов(перевести с секунд) от настоящего времени
+// function toPretty(seconds) {
+//   if (seconds === 0) {
+//     return "just now";
+//   }
+
+//   if (seconds < 60) {
+//     return (seconds === 1 ? "a second" : `${seconds}` + " seconds") + " ago";
+//   }
+
+//   if (seconds < 3600) {
+//     const minutes = Math.floor(seconds / 60);
+//     return (minutes === 1 ? "a minute" : `${minutes}` + " minutes") + " ago";
+//   }
+
+//   if (seconds < 86400) {
+//     const hours = Math.floor(seconds / 3600);
+//     return (hours === 1 ? "an hour" : `${hours}` + " hours") + " ago";
+//   }
+
+//   if (seconds < 604800) {
+//     const days = Math.floor(seconds / 86400);
+//     return (days === 1 ? "a day" : `${days}` + " days") + " ago";
+//   }
+
+//   const weeks = Math.floor(seconds / 604800);
+//   return (weeks === 1 ? "a week " : `${weeks}` + " weeks ") + "ago"
+// }
+// console.log(toPretty(604800 * 2))  //"11 hours ago" 
+
+
+//6 String Expansion
+//Учитывая строку, содержащую буквенно-цифровые символы («3a4B2d»),
+// верните расширение этой строки: числовые значения представляют собой появление каждой буквы,
+// предшествующей этому числовому значению.В конечной строке не должно быть цифровых символов.
+// function stringExpansion(s) {
+//   let result = '';
+//   let count = 1;
+
+//   for (let i = 0; i < s.length; i++) {
+//     if (!isNaN(s[i])) {
+//       count = parseInt(s[i]);
+//     } else {
+//       result += s[i].repeat(count);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(stringExpansion('a2bcde')); // Выводит "abbccddee"
