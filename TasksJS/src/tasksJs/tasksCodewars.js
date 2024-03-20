@@ -363,3 +363,31 @@ findUniq([0, 0, 0.55, 0, 0]) //1
 // }
 
 // console.log(stringExpansion('a2bcde')); // Выводит "abbccddee"
+
+
+//8 Holiday VIII - Duty Free
+function dutyFree(normPrice, discount, hol) {
+ const difference = (normPrice * discount) / 100;
+  return Math.floor(hol/difference) 
+}
+console.log(dutyFree(24, 35, 3000)) //166
+
+
+//6 Are we alternate? находятся ли гласные (a, e, i, o, u) и согласные в чередующемся порядке.
+function isAlt(str) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const arr = str.toLowerCase().split('');
+  let isAlternate = true;
+
+  arr.map((el, index) => {
+    const incl = vowels.includes(el);
+    
+    if (index < arr.length - 1 && vowels.includes(arr[index + 1]) === incl) {
+      isAlternate = false;
+    }
+  });
+
+  return isAlternate;
+}
+
+console.log(isAlt('banana'));
